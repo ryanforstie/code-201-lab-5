@@ -55,11 +55,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // TODO: Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-
+  var sum1 = sum(a, b);
+  var totalSum = sum(sum1[0], c);
+  var prod1 = multiply(a, b);
+  var totalTime = multiply(prod1[0], c);
+  var message1 = a + ' and ' + b + ' and ' + c + ' sum to ' + totalSum[0] + '.';
+  var message2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + totalTime[0] + '.';
+  return[totalSum[0], totalTime[0], message1, message2];
 }
 
 // TODO: Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -77,11 +83,14 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
-
+  var sum1 = sum(testArray[0], testArray[1]);
+  var totalSum = sum(sum1[0], testArray[2]);
+  var message1 = testArray + ' was passed in as an array of numbers, and ' + totalSum[0] + ' is their sum.';
+  return [totalSum[0], message1];
 }
 
 // TODO: Here is the test for sumArray(); uncomment it to run it
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -97,7 +106,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
-
+  var prod1 = multiply(testArray[0], testArray[1]);
+  var totalProd = multiply(prod1[0], testArray[2]);
+  var message = 'The numbers ' + testArray + ' have a product of ' + totalProd[0] + '.';
+  return [totalProd[0], message];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
